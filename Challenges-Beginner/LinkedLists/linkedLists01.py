@@ -1,3 +1,8 @@
+"""
+This solution doesn't change the Node class
+"""
+
+
 class Node(object):
     def __init__(self, data):
         self.data = data
@@ -15,3 +20,4 @@ def build_one_two_three():
     head = push(head, 2)
     head = push(head, 1)
     return head
+
