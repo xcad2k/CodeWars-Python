@@ -1,10 +1,10 @@
-'''
+"""
 TASK:
 
 Given a list and a number n, create a new list that contains each number of list at most n times without reordering. For example if n=2, and the input is [1,2,3,1,2,1,2,3], you take [1,2,3,1,2], drope the next [1,2] since this would lead to 1 and 2 being in the result 3 times and then take 3, which leads to [1,2,3,1,2,3].
-'''
+"""
 
-list = [1, 2, 3, 1, 2, 1, 2, 3]
+l = [1, 2, 3, 1, 2, 1, 2, 3]
 n = 2
 
 '''
@@ -15,9 +15,9 @@ SOLUTION 1:
 
 result = []
 
-for x in list:
-	if result.count(x) < n:
-		result.append(x)
+for x in l:
+    if result.count(x) < n:
+        result.append(x)
 
 print(result)
 
@@ -30,11 +30,11 @@ SOLUTION 2:
 result = []
 count = {}
 
-for x in list:
-  if x not in count:
-    count[x] = 0;
-  if count[x] < n:
-    result.append(x)
-    count[x] += 1
+for x in l:
+    if x not in count:
+        count[x] = 0;
+    if count[x] < n:
+        result.append(x)
+        count[x] += 1
 
 print(result)

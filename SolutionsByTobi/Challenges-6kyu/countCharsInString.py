@@ -1,3 +1,9 @@
+"""
+CODEWARS CHALLENGE: Count characters in your string
+URL: https://www.codewars.com/kata/52efefcbcdf57161d4000091
+"""
+
+
 def count(str):
     result = {}
     for char in str:

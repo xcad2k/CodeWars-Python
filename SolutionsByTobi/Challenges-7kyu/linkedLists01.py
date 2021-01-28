@@ -1,4 +1,9 @@
 """
+CODEWARS-CHALLENGE: Linked Lists - Push & BuildOneTwoThree
+URL: https://www.codewars.com/kata/55be95786abade3c71000079
+"""
+
+"""
 This solution doesn't change the Node class
 """
 
@@ -20,4 +25,3 @@ def build_one_two_three():
     head = push(head, 2)
     head = push(head, 1)
     return head
-

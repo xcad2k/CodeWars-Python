@@ -1,6 +1,12 @@
 """
+CODEWARS-CHALLENGE: Linked Lists - Push & BuildOneTwoThree
+URL: https://www.codewars.com/kata/55be95786abade3c71000079
+"""
+
+"""
 This solution has a modified Node class for a shorter and cleaner solution
 """
+
 
 class Node(object):
     def __init__(self, data, nxt=None):
