@@ -1,3 +1,11 @@
+# Challenge-URL: https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/train/python
+# Challenge-Name: Multiplication table
+#
+# ---
+#
+
+
+# Solution 1
 def multiplication_table(size):
 
     table = []
@@ -11,4 +19,11 @@ def multiplication_table(size):
     return table
 
 
+# Solution 2
+def multiplication_table2(size):
+    return [[y * x for y in range(1, size + 1)] for x in range(1, size + 1)]
+
+
+# Tests
 print(multiplication_table(3))
+print(multiplication_table2(3))
