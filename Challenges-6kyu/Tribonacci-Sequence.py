@@ -1,3 +1,11 @@
+#####################################################################################
+#                                                                                   #
+#   NAME:     Tribonacci Sequence                                                   #
+#   RANK:     6kyu                                                                  #
+#   URL:      https://www.codewars.com/kata/556deca17c58da83c00002db/train/python   #
+#                                                                                   #
+#####################################################################################
+
 def tribonacci(signature, n):
 
     for i in range(n):

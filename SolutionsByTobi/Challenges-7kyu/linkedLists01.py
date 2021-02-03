@@ -1,7 +1,10 @@
-"""
-CODEWARS-CHALLENGE: Linked Lists - Push & BuildOneTwoThree
-URL: https://www.codewars.com/kata/55be95786abade3c71000079
-"""
+#####################################################################################
+#                                                                                   #
+#   NAME:     Linked Lists - Push & BuildOneTwoThree                                #
+#   RANK:     7kyu                                                                  #
+#   URL:      https://www.codewars.com/kata/55be95786abade3c71000079/train/python   #
+#                                                                                   #
+#####################################################################################
 
 """
 This solution doesn't change the Node class

@@ -6,4 +6,4 @@ string = "milkshakepizzachickenfriescokeburgerpizzasandwichmilkshakepizza"
 
 print(re.findall(menu_items, string))
 
-New-Cashier-Does-Not-Know-About-Space-or-Shift
+# New-Cashier-Does-Not-Know-About-Space-or-Shift

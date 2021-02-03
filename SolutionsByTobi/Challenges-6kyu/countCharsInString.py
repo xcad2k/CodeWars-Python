@@ -1,7 +1,10 @@
-"""
-CODEWARS CHALLENGE: Count characters in your string
-URL: https://www.codewars.com/kata/52efefcbcdf57161d4000091
-"""
+#####################################################################################
+#                                                                                   #
+#   NAME:     Count characters in your string                                       #
+#   RANK:     6kyu                                                                  #
+#   URL:      https://www.codewars.com/kata/52efefcbcdf57161d4000091/train/python   #
+#                                                                                   #
+#####################################################################################
 
 
 def count(str):

@@ -1,8 +1,10 @@
-"""
-CODEWARS-CHALLENGE: Your order, please
-URL: https://www.codewars.com/kata/55c45be3b2079eccff00010f
-"""
-
+#####################################################################################
+#                                                                                   #
+#   NAME:     Your order, please                                                    #
+#   RANK:     6kyu                                                                  #
+#   URL:      https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/python   #
+#                                                                                   #
+#####################################################################################
 
 import re
 

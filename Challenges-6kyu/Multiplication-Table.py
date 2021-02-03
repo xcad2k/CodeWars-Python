@@ -1,9 +1,10 @@
-# Challenge-URL: https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/train/python
-# Challenge-Name: Multiplication table
-#
-# ---
-#
-
+#####################################################################################
+#                                                                                   #
+#   NAME:     Multiplication table                                                  #
+#   RANK:     6kyu                                                                  #
+#   URL:      https://www.codewars.com/kata/534d2f5b5371ecf8d2000a08/train/python   #
+#                                                                                   #
+#####################################################################################
 
 # Solution 1
 def multiplication_table(size):
