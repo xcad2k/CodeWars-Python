@@ -57,7 +57,7 @@ challengeName = input(f"What is the Challenge Name? [{fetchedName}]: ") or fetch
 challengeRank = input(f"What is the Challenge Difficulty? [{fetchedRank}]: ") or fetchedRank
 
 # Remove spaces, and insert -
-fileName = f"{challengeName.replace(' ', '-')}.py" if not PREFER_CAMEL_CASE else f"{challengeName[0].lower()}{''.join(word[0].upper()+word[1:] for word in challengeName.split(' '))[1:]}.py"
+fileName = f"{challengeName.replace(' ', '-')}.py" if not PREFER_CAMEL_CASE else f"{challengeName[0].lower()}{''.join(word[0].upper() + word[1:] for word in challengeName.split(' '))[1:]}.py"
 
 # Create File Path
 filePath = f"{ROOT}/Challenges-{challengeRank}kyu/{fileName}"
@@ -77,6 +77,12 @@ challengeUrlLine = createLine(challengeUrlLine, length)
 challengeRankLine = createLine(challengeRankLine, length)
 
 try:
+    if not os.path.exists(os.path.dirname(filePath)):
+        try:
+            os.makedirs(os.path.dirname(filePath))
+        except OSError as exc:  # Guard against race condition
+            print("Couldn't create directory!")
+
     with open(filePath, 'x', encoding='utf-8') as f:
         f.write(f"""{breakLine}
 {createLine("", length)}
