@@ -57,7 +57,7 @@ challengeName = input(f"What is the Challenge Name? [{fetchedName}]: ") or fetch
 challengeRank = input(f"What is the Challenge Difficulty? [{fetchedRank}]: ") or fetchedRank
 
 # Remove spaces, and insert -
-fileName = f"{challengeName.replace(' ', '-')}.py" if not PREFER_CAMEL_CASE else f"{challengeName[0].lower()}{''.join(word[0].upper() + word[1:] for word in challengeName.split(' '))[1:]}.py"
+fileName = f"{challengeName.strip().replace(' ', '-')}.py" if not PREFER_CAMEL_CASE else f"{challengeName[0].lower()}{''.join(word[0].upper() + word[1:] for word in challengeName.strip().split(' '))[1:]}.py"
 
 # Create File Path
 filePath = f"{ROOT}/Challenges-{challengeRank}kyu/{fileName}"
