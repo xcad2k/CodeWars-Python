@@ -1,8 +1,10 @@
-# Challenge-URL: https://www.codewars.com/kata/52597aa56021e91c93000cb0/train/python
-# Challenge-Name: Moving Zeros To The End
-#
-# ---
-#
+#####################################################################################
+#                                                                                   #
+#   NAME:     Moving Zeros To The End                                               #
+#   RANK:     5kyu                                                                  #
+#   URL:      https://www.codewars.com/kata/52597aa56021e91c93000cb0/train/python   #
+#                                                                                   #
+#####################################################################################
 
 
 # Solution 1

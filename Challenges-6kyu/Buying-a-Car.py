@@ -1,3 +1,11 @@
+#####################################################################################
+#                                                                                   #
+#   NAME:     Buying a car                                                          #
+#   RANK:     6kyu                                                                  #
+#   URL:      https://www.codewars.com/kata/554a44516729e4d80b000012/train/python   #
+#                                                                                   #
+#####################################################################################
+
 def nbMonths(startPriceOld, startPriceNew, savingperMonth, percentLossByMonth):
     # Return values: Months, MoneyLeft
 

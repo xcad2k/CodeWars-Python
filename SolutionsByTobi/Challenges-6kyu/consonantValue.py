@@ -1,8 +1,10 @@
-"""
-CODEWARS CHALLENGE: Consonant Value
-URL: https://www.codewars.com/kata/59c633e7dcc4053512000073
-"""
-
+#####################################################################################
+#                                                                                   #
+#   NAME:     Consonant Value                                                       #
+#   RANK:     6kyu                                                                  #
+#   URL:      https://www.codewars.com/kata/59c633e7dcc4053512000073/train/python   #
+#                                                                                   #
+#####################################################################################
 
 import re
 

@@ -1,8 +1,10 @@
-"""
-CODEWARS-CHALLENGE: Tribonacci Sequence
-URL: https://www.codewars.com/kata/556deca17c58da83c00002db
-"""
-
+#####################################################################################
+#                                                                                   #
+#   NAME:     Tribonacci Sequence                                                   #
+#   RANK:     6kyu                                                                  #
+#   URL:      https://www.codewars.com/kata/556deca17c58da83c00002db/train/python   #
+#                                                                                   #
+#####################################################################################
 
 # works like fibonacci only with a base length of 3
 def tribonacci(signature, n):

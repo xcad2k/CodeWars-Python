@@ -1,3 +1,11 @@
+#####################################################################################
+#                                                                                   #
+#   NAME:     Highest Rank Number in an Array                                       #
+#   RANK:     6kyu                                                                  #
+#   URL:      https://www.codewars.com/kata/5420fc9bb5b2c7fd57000004/train/python   #
+#                                                                                   #
+#####################################################################################
+
 def find_the_highest(mylist):
     my_dict = {}
     for val in mylist:
