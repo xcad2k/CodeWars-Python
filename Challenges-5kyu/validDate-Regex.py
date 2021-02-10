@@ -4,3 +4,16 @@
 # ---
 #
 
+# TODO: CHALLENGE IS NOT FINISHED!!!
+
+import re
+
+
+def valid_date(string):
+    date = re.findall('\[\d{2}\-\\d{2}]', string)
+    numbers = re.findall('\d{2}', date[0])
+
+    return numbers
+
+
+print(valid_date('ignored [08-11] ignored'))
