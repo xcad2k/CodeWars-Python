@@ -5,6 +5,8 @@ import re
 
 import requests
 
+from create_markdown import generate_md
+
 # Load environment variables for configuration
 ROOT = os.getenv('CODEWARS_HOME', ".")
 PYTHON_EDITOR = os.getenv('PYTHON_EDITOR', 'code')
@@ -57,10 +59,10 @@ challengeName = input(f"What is the Challenge Name? [{fetchedName}]: ") or fetch
 challengeRank = input(f"What is the Challenge Difficulty? [{fetchedRank}]: ") or fetchedRank
 
 # Remove spaces, and insert -
-fileName = f"{challengeName.strip().replace(' ', '-')}.py" if not PREFER_CAMEL_CASE else f"{challengeName[0].lower()}{''.join(word[0].upper() + word[1:] for word in challengeName.strip().split(' '))[1:]}.py"
+fileName = f"{challengeName.strip().replace(' ', '_').lower()}.py" if not PREFER_CAMEL_CASE else f"{challengeName[0].lower()}{''.join(word[0].upper() + word[1:] for word in challengeName.strip().split(' '))[1:]}.py"
 
 # Create File Path
-filePath = f"{ROOT}/Challenges-{challengeRank}kyu/{fileName}"
+filePath = f"{ROOT}/challenges_{challengeRank}kyu/{fileName}"
 
 if os.path.exists(filePath):
     print("File is already existing")
@@ -93,6 +95,9 @@ try:
 {breakLine}
 
 """)
+
+    # generate Markdown
+    generate_md(filePath)
 
     if os.system(f"{PYTHON_EDITOR} {filePath}") != 0:
         print(f"Couldn't open {'Visual Studio Code' if PYTHON_EDITOR == 'code' else PYTHON_EDITOR}")
