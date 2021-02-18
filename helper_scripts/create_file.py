@@ -16,6 +16,7 @@ PREFER_CAMEL_CASE = os.getenv('CODEWARS_PREFER_CAMEL_CASE', "false").lower() == 
 replacers = {
     "&amp;": "And",
     "-": "",
+    "&#39;": "",
     r"\([^\)]*\)": "",
     r"\s+": " ",
     r"\\u0026": "And"
@@ -33,7 +34,7 @@ challengeUrl = input("What is the Challenge URL? : ")
 # if data can be fetched automatically use them as defaults
 r = None
 try:
-    r = requests.get(challengeUrl if "train" in challengeUrl else challengeUrl + "/train/python")
+    r = requests.get(f"https://www.codewars.com/kata/{re.findall(r'(?<=kata/)[a-f0-9]+', challengeUrl)[0]}/train/python")
 except:
     print("Couldn't resolve url!")
 
@@ -49,6 +50,13 @@ try:
     fetchedRank = re.search(r"\d(?=\skyu)", r.text.split("shell_content")[-1]).group().strip()
 except:
     pass
+
+# fetchedCode = ""
+# try:
+#     loadedData = requests.post(f"https://www.codewars.com/kata/projects/{re.findall(r'(?<=kata/)[a-f0-9]+', challengeUrl)[0]}/python/session")
+#     print(loadedData.text)
+# except:
+#     pass
 
 # Apply replacer options
 for replacer in replacers:
