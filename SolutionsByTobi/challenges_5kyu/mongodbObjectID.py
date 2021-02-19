@@ -6,18 +6,16 @@
 #                                                                      #
 ########################################################################
 
-from datetime import datetime
 import re
+from datetime import datetime
 
 
 class Mongo(object):
 
     @classmethod
     def is_valid(cls, s):
-        """returns True if s is a valid MongoID; otherwise False"""
-        return re.match(r"[a-f0-9]", s)
+        return type(s) == str and re.match(r"^[a-f0-9]{24}$", s) is not None
 
     @classmethod
     def get_timestamp(cls, s):
-        """if s is a MongoID, returns a datetime object for the timestamp; otherwise False"""
-        pass
+        return False if not Mongo.is_valid(s) else datetime.fromtimestamp(int(f"0x{s[:8]}", 16))
