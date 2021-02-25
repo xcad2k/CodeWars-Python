@@ -6,22 +6,20 @@
 #                                                                              #
 ################################################################################
 
-"""
-DISCLAIMER:
-PRETTY BAD PERFORMING BUT WORKING
-BETTER SOLUTION CAN BE FOND IN sumAndRestTheNumberWithItsReversedAndSeeWhatHappens02.py
-"""
+memo = []
 
 
 def sum_dif_rev(n):
-    i, j = 44, 0
+    i = memo[-1] if memo else 0
     while True:
-        i += 1
-        invers = int(str(i)[::-1])
-        if str(i)[-1] != '0' and invers != i and (invers + i) % abs(invers - i) == 0:
-            j += 1
-        if j == n:
-            return i
+        while len(memo) < n:
+            i += 9
+            r = int(str(i)[::-1])
+            # i % 10 checks if the number ends with 0
+            # r != i is necessary to not try % 0
+            if i % 10 and r != i and (r + i) % abs(r - i) == 0:
+                memo.append(i)
+        return memo[n - 1]
 
 
 print(sum_dif_rev(65))
